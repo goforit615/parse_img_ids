@@ -2,7 +2,16 @@
 
 - [이 웹문서](http://www.pythonscraping.com/pages/page3.html)를 파싱해서, 이미지 url을 추출해보자!
 - 정규표현식 & BeautifulSoup을 활용
-
+```
+from urllib.request import urlopen 
+from bs4 import BeautifulSoup 
+import re
+html = urlopen("http://www.pythonscraping.com/pages/page3.html")
+bsObj = BeautifulSoup(html)
+images = ...
+for image in images:
+    print(image["src"])
+```
 ![Screenshot](images/page3.jpg)
 ```
 ../img/gifts/img1.jpg  
